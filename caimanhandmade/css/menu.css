@@ -1,0 +1,243 @@
+/*
+
+menu buttons
+
+*/
+
+.menuButtonContainer {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    top: 0;
+    right: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.menuButtonContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.menuButtonContent img {
+    position: absolute;
+    width: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#openMenuButton {
+    z-index: 4;
+}
+
+#closeMenuButton {
+    z-index: 6;
+}
+
+.menuButtonHiddenClass {
+    top: -100px;
+}
+
+/*
+
+menu text
+
+*/
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#menuContainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #dfdfdf;
+    z-index: 5;
+    transition: all 0.4s ease-in-out;
+    font-size: 18pt;
+}
+
+.menuHiddenClass {
+    left: 100%;
+}
+
+.menuVisibleClass {
+    left: 0;
+}
+
+#menuContent {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inlineMenuContainer {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.inlineMenuContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#menuArticlesContent div {
+    margin: 10px auto;
+}
+
+#menuLogoContent {
+    font-family: EngraversMT;
+    font-weight: bold;
+}
+
+.stopOverflowClass {
+    overflow: hidden;
+}
+
+@media screen 
+and (max-width: 900px) 
+and (orientation: landscape) {
+    #menuContent {
+        display: inline-flex;
+    }
+
+    .inlineMenuContainer {
+        width: 50%;
+        height: 100%;
+    }
+
+    #menuArticlesContent div {
+        margin: 5px auto;
+    }
+}
+
+@media screen 
+and (min-device-width: 768px) 
+and (orientation: portrait) {
+    #menuContainer {
+        font-size: 22pt;
+    }
+    
+    .menuButtonContainer {
+        width: 90px;
+        height: 90px;
+    }
+
+    .menuButtonContent img {
+        width: 45px;
+    }
+}
+
+@media screen 
+and (min-width: 900px) 
+and (max-width: 1024px) 
+and (orientation: landscape) {
+    .menuButtonContainer {
+        width: 90px;
+        height: 90px;
+    }
+
+    #menuContainer {
+        font-size: 22pt;
+    }
+    #menuContent {
+        display: inline-flex;
+    }
+
+    .inlineMenuContainer {
+        width: 50%;
+        height: 100%;
+    }
+
+    #menuArticlesContent div {
+        margin: 10px auto;
+    }
+
+}
+
+@media screen 
+and (min-width: 1025px) 
+and (orientation: portrait) {
+    #menuContainer {
+        font-size: 26pt;
+    }
+
+    .menuButtonContainer {
+        width: 110px;
+        height: 110px;
+    }
+
+    .menuButtonContent img {
+        width: 50px;
+    }
+
+    #menuArticlesContent div {
+        margin: 20px auto;
+    }
+}
+
+@media screen 
+and (min-width: 1025px)
+and (orientation: landscape) {
+    #menuContainer {
+        font-size: 26pt;
+    }
+
+    .menuButtonContainer {
+        width: 110px;
+        height: 110px;
+    }    
+
+    .menuButtonContent img {
+        width: 45px;
+        transition: all 0.3 ease-in-out;
+    }
+
+    .menuButtonContent:hover img {
+        width: 50px;
+    }
+
+    #menuContent {
+        display: inline-flex;
+    }
+
+    .inlineMenuContainer {
+        width: 50%;
+        height: 100%;
+    }
+
+    #menuArticlesContent div {
+        margin: 25px auto;
+    }
+
+
+}
+
+@media screen 
+and (min-device-width: 1921px) {
+    .menuButtonContainer {
+        left: calc(50% + 1920px / 2 - 55px);
+    }
+
+    .menuHiddenClass {
+        bottom: 100%;
+        left: 0;
+    }   
+
+    .menuVisibleClass {
+        bottom: 0;
+    }
+
+    #menuContent {
+        max-width: 1500px;
+    }
+}

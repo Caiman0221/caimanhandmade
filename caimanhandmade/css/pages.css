@@ -1,0 +1,675 @@
+#maxWidth {
+    width: 100%;
+    max-width: 1920px;
+    height: 10%;
+    margin: auto;
+}
+
+#logoContainer {
+    position: relative;
+    width: 65%;
+    height: 100%;
+    border-bottom: 1px solid black;
+}
+
+#logoContent {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    font-weight: bold;
+    font-family: EngraversMT;
+}
+
+#logoContent span {
+    font-size: 10pt;
+}
+
+#pagesHeader {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+#contentsContainer {
+    width: 90%;
+    margin: auto;
+}
+
+#contentsContent {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#contentsContent div {
+    margin-left: 5px;
+}
+
+#contentsContent img {
+    height: 14pt;
+}
+
+.pagesSection {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sectionContainer {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.flexStagesContainer {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+.flexStagesContent div {
+    margin: 5px;
+}
+
+.flexStagesContent img {
+    height: 14pt;
+    transform: rotate(90deg);
+}
+
+/*
+
+PayCards
+
+*/
+
+
+#sectionInlineContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.PayCards {
+    background: linear-gradient(140deg, #f24822, 10%, #034aa6da, 80%, #056cf2da);
+    border-radius: 20px;
+    padding: 2px 5px 2px 5px;
+    text-align: center;
+    color: #ffffff;
+
+    width: 100%;
+    margin: 5px;
+    font-size: 15pt;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.PayCards input {
+    display: none;
+}
+
+.PayCards h3 {
+    font-size: 16pt;
+    height: calc(16pt * 2);
+    display: flex;
+    align-items: center;
+}
+
+.PayCards p {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.PayCards div {
+    height: calc(16pt * 2.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PayCards button {
+    padding: 7px 16px;
+    font-size: 14pt;
+}
+
+.PayCards button:active {
+    color: #f24822;
+}
+
+.PayCards menu {
+    padding: 0;
+    height: calc(15pt * 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PayCards li {
+    list-style-type: none;
+}
+
+/*
+
+portfolio
+
+*/
+
+#portfolioContainer,
+#portfolioBlockContainer {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#portfolioContainer img {
+    width: calc(100% - 10px);
+    margin: 5px;
+}
+
+#portfolioBlockContainer img {
+    width: 100%;
+}
+
+#portfolioBlockContainer 
+.portfolioTextContainer {
+    margin: 10px 5px;
+}
+
+#portfolioBlockContainer h2 {
+    margin: 5px 0;
+}
+
+@media screen 
+and (max-width: 900px) 
+and (orientation: landscape) {
+    #maxWidth {
+        height: 20%;
+    }
+
+    #logoContainer {
+        width: 45%;
+    }
+    /*
+    
+    PayCards
+    
+    */
+
+    #sectionInlineContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .PayCards {
+        width: calc(100% / 2 - 20px);
+        margin: 5px;
+        font-size: 15pt;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .PayCards h3 {
+        height: calc(16pt * 2);
+        display: flex;
+        align-items: center;
+    }
+    
+    .PayCards p {
+        height: calc(15pt * 6.5);
+        display: flex;
+        align-items: center;
+    }
+
+    .PayCards menu {
+        height: calc(15pt * 2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PayCards div {
+        height: calc(16pt * 2.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*
+    
+    portfolio
+    
+    */
+
+    #portfolioContainer img {
+        width: calc(50% - 10px);
+    }
+
+    .portfolioTextContainer {
+        width: calc(50% - 10px);
+    }
+
+    .flexStagesContainer {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .flexStagesContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .flexStagesContent img {
+        transform: rotate(0);
+    }
+
+}
+
+@media screen 
+and (min-device-width: 768px) 
+and (orientation: portrait) {
+    #logoContainer {
+        width: 45%;
+        font-size: 20pt;
+    }
+
+    /*
+    
+    PayCards
+    
+    */
+
+    #sectionInlineContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .PayCards {
+        width: calc(100% / 2 - 20px);
+        margin: 5px;
+        font-size: 15pt;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .PayCards h3 {
+        height: calc(16pt * 2);
+        display: flex;
+        align-items: center;
+    }
+    
+    .PayCards p {
+        height: calc(15pt * 6.5);
+        display: flex;
+        align-items: center;
+    }
+
+    .PayCards menu {
+        height: calc(15pt * 2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PayCards div {
+        height: calc(16pt * 2.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*
+    
+    portfolio
+    
+    */
+
+    #portfolioContainer img {
+        width: calc(50% - 10px);
+    }
+
+    .portfolioTextContainer {
+        width: calc(50% - 10px);
+    }
+
+    .flexStagesContainer {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .flexStagesContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .flexStagesContent img {
+        transform: rotate(0);
+    }
+
+}
+
+@media screen 
+and (min-width: 900px) 
+and (max-width: 1024px) 
+and (orientation: landscape) {
+    #logoContainer {
+        width: 45%;
+        font-size: 20pt;
+    }
+
+    /*
+    
+    PayCards
+    
+    */
+
+    #sectionInlineContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .PayCards {
+        width: calc(100% / 3 - 20px);
+        margin: 5px;
+        font-size: 15pt;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .PayCards h3 {
+        height: calc(16pt * 2);
+        display: flex;
+        align-items: center;
+    }
+    
+    .PayCards p {
+        height: calc(15pt * 7.5);
+        display: flex;
+        align-items: center;
+    }
+
+    .PayCards menu {
+        height: calc(15pt * 2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PayCards div {
+        height: calc(16pt * 2.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*
+    
+    portfolio
+    
+    */
+
+    #portfolioContainer img {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .portfolioTextContainer {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .flexStagesContainer {
+        width: 70%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .flexStagesContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .flexStagesContent img {
+        transform: rotate(0);
+    }
+
+}
+
+@media screen 
+and (min-width: 1025px) 
+and (orientation: portrait) {
+    #logoContainer {
+        font-size: 26pt;
+    }
+
+    #logoContent span {
+        font-size: 16pt;
+    }
+
+    .pagesHeader,
+    .sectionContainer {
+        margin: 60px auto;
+    }
+
+    /*
+    
+    PayCards
+    
+    */
+
+    #sectionInlineContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .PayCards {
+        width: calc(100% / 5 - 10px);
+        margin: 5px;
+        font-size: 15pt;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .PayCards h3 {
+        height: calc(16pt * 2);
+        display: flex;
+        align-items: center;
+    }
+    
+    .PayCards p {
+        height: calc(15pt * 10);
+        display: flex;
+        align-items: center;
+    }
+
+    .PayCards menu {
+        height: calc(15pt * 2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PayCards div {
+        height: calc(16pt * 2.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sectionInlineContainer .PayCards:hover {
+        width: calc(100% / 2 - 10px);
+    }
+
+    /*
+    
+    portfolio
+    
+    */
+    #portfolioContainer img {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .portfolioTextContainer {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .flexStagesContainer {
+        width: 70%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .flexStagesContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .flexStagesContent img {
+        transform: rotate(0);
+    }
+}
+
+@media screen 
+and (min-width: 1025px)
+and (orientation: landscape) {
+    #logoContainer {
+        font-size: 26pt;
+        width: 30%;
+        margin-left: 0;
+    }
+
+    #logoContent span {
+        font-size: 16pt;
+    }
+
+    #contentsContainer {
+        max-width: 1300px;
+    }
+
+    .pagesHeader,
+    .sectionContainer {
+        width: 90%;
+        max-width: 1300px;
+        margin: 60px auto;
+    }
+
+    #sectionInlineContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .PayCards {
+        width: calc(100% / 5 - 10px);
+        margin: 5px;
+        font-size: 15pt;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .PayCards h3 {
+        height: calc(16pt * 2);
+        display: flex;
+        align-items: center;
+    }
+    
+    .PayCards p {
+        height: calc(15pt * 10);
+        display: flex;
+        align-items: center;
+    }
+
+    .PayCards menu {
+        height: calc(15pt * 2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PayCards div {
+        height: calc(16pt * 2.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sectionInlineContainer .PayCards:hover {
+        width: calc(100% / 2 - 10px);
+    }
+
+    #portfolioContainer img {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .portfolioTextContainer {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .flexStagesContainer {
+        width: 70%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .flexStagesContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .flexStagesContent img {
+        transform: rotate(0);
+    }
+}
+
+@media screen 
+and (min-device-width: 1921px) {}

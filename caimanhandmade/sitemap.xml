@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.caimanhandmade.ru/</loc>
+        <lastmod>2020-08-03</lastmod>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.caimanhandmade.ru/web/</loc>
+        <lastmod>2020-08-03</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.caimanhandmade.ru/photo/</loc>
+        <lastmod>2020-08-03</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://caimanhandmade.ru/things/</loc>
+        <lastmod>2020-08-03</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://caimanhandmade.ru/about/</loc>
+        <lastmod>2020-08-03</lastmod>
+        <priority>0.6</priority>
+    </url>
+</urlset>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174965291-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-174965291-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mailru-domain" content="SRWsJHeLtSqw6npc" />
+    <meta name="yandex-verification" content="fbb048058ebc9fed" />
+    <meta name="google-site-verification" content="yqFb7vd8R5RHDh8yVJS8kfsIUpBoLBrIlv0eaXDUmq4" />
+    <meta name="Description" content="Создаем сайты с индивидуальным дизайном, делаем предметные фото для различных интернет ресурсов, шьем вещи из натуральной кожи ручной работы"/>
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="icon" type="image/x-icon" href="/tab_logo.ico" />
+    <link rel="canonical" href="https://www.caimanhandmade.ru"/>
+    <script src="/JS/main.js"></script>
+    <script src="/JS/formsFetch.js"></script>
+    <title>Caiman handmade - Главная страница</title>
+</head>
+<body class="stopOverflowClass">
+
+    <div id="preloadContainer">
+        <div id="preloadContent">
+            <img src="/icon/logo_black.png" alt="">
+        </div>
+        <style>
+            #preloadContainer {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: #ffffff;
+                z-index: 10;
+                transition: all 0.5s ease-in-out;
+            }
+
+            #preloadContent {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #preloadContent img {
+                width: 230px;
+                transition: all 1s ease-in-out;
+            }
+
+            .widthTransform {
+                opacity: 0.4;
+            }
+
+            .preloadNoneClass {
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+            }
+        </style>
+        <script type="text/javascript">
+            let widthTransform = setInterval (()=>{
+                let img = document.getElementById('preloadContent');
+                img = img.getElementsByTagName('img')[0];
+                if (img.classList.contains('widthTransform')) img.classList.remove('widthTransform')
+                else img.classList.add('widthTransform')
+            },1000)
+
+            window.onload = function() {
+                document.getElementById('preloadContainer').classList.add('preloadNoneClass')
+                document.body.classList.remove('stopOverflowClass');
+                setTimeout(()=>{
+                    document.getElementById('preloadContainer').style.display = 'none';
+                },1000);
+            }
+        </script>
+    </div>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(66188473, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/66188473" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <div class="menuButtonContainer" id="openMenuButton">
+        <div class="menuButtonContent">
+            <img src="/icon/menu_icon_red.png" alt="" onclick="openMenuButton()">
+        </div>
+    </div>
+
+    <div id="menuContainer" class="menuHiddenClass">
+        <div id="menuContent">
+            <div class="inlineMenuContainer" >
+                <div class="inlineMenuContent" id="menuArticlesContent">
+                    <div>
+                        <a href="#Contacts" onclick="closeMenuButton()">
+                            <span class="redLetter">К</span>онтакты
+                        </a>
+                    </div>
+                    <div><a href="/web/"><span class="redLetter">С</span>айты</a></div>
+                    <div><a href="/photo/"><span class="redLetter">Ф</span>ото</a></div>
+                    <div><a href="/things/"><span class="redLetter">В</span>ещи</a></div>
+                    <div><a href="/about/"><span class="redLetter">О</span>бо мне</a></div>
+                </div>
+            </div>
+            <div class="inlineMenuContainer">
+                <div class="inlineMenuContent" id="menuLogoContent">
+                    <a href="/">
+                        CAIMAN
+                        <div>
+                            HANDMADE
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menuButtonContainer menuButtonHiddenClass" id="closeMenuButton">
+        <div class="menuButtonContent">
+            <img src="/icon/menu_close_icon.png" alt="" onclick="closeMenuButton()">
+        </div>
+    </div>
+
+    <header id="mainPageHeader">
+        <div id="headerInfoContainer">
+            <div id="logoContainer">
+                <div id="logoContent">
+                    <a href="/">
+                        CAIMAN
+                        <span>
+                            HANDMADE
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="imgAboutContainer">
+                <div id="imgAboutContent">
+                    <a href="/web/">
+                        <div class="flexImgAboutContainer">
+                            <img src="/icon/web_icon.png" alt="">
+                            <div class="headerIconArticle">
+                                <h1><span class="redLetter">д</span>елаю сайты</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/photo/">
+                        <div class="flexImgAboutContainer">
+                            <img src="/icon/photo_icon.png" alt="">
+                            <div id="headerIconArticle">
+                                <h1><span class="redLetter">д</span>елаю фото</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/things/">
+                        <div class="flexImgAboutContainer">
+                            <img src="/icon/lether_icon.png" alt="">
+                            <div class="headerIconArticle">
+                                <h1><span class="redLetter">д</span>елаю вещи</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="taglineContainer">
+                <div id="taglineContent">
+                    <div>Brilliant things for Brilliant people</div>
+                    <div>
+                        <a href="#Contacts">
+                            <img src="/icon/Arrow/arrow_top_to_bottom_gradient.png" alt="" class="arrowImgClass">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <div id="Contacts">
+            <div id="contactsArticleContainer">
+                <div id="contactsArticleContent">
+                    <h3>контакты</h3>
+                </div>
+            </div>
+            <div id="contactsContainer">
+                <div class="inlineContactsContainer">
+                    <div id="contactsContentForm" class="contactsContent">
+                        <div>Ваше имя</div>
+                        <div><input type="text" name="" maxlength="20" id="footerCustomerName" onchange="footerNameChange()"></div>
+                        <div>Ваш email</div>
+                        <div><input type="tel" name="" maxlength="20" id="footerCustomerEmail" onchange="footerEmailChange()"></div>
+                        <div>Ваш вопрос</div>
+                        <div>
+                            <textarea name="" cols="30" rows="4" maxlength="400" id="footerCustomerQuestion"></textarea>
+                        </div>
+                        <div id="footerErrorDiv"></div>
+                        <div><button onclick="footerQuestionClick()">отправить</button></div>
+                    </div>
+                </div>
+                <div class="inlineContactsContainer">
+                    <div class="contactsContent">
+                        <div class="contactsInfo">
+                            <a href="tel:+79774439642">+7 (977) 443 96 42</a>
+                        </div>
+                        <div class="contactsInfo">
+                            <a href="mailto:info@caimanhandmade.ru">info@caimanhandmade.ru</a>
+                        </div>
+                        <div class="contactsInfo">
+                            г. Москва
+                        </div>
+                        <div id="socialLinksContainer" class="contactsInfo">
+                            <div id="socialLinksContent">
+                                <div>
+                                  <a href="https://www.instagram.com/caiman_handmade/" target="_blank" rel="noopener noreferrer">
+                                    <img src="/icon/inst_icon.png" alt="">
+                                  </a>
+                                </div>
+                                <div>
+                                  <a href="https://t.me/caiman_handmade" target="_blank" rel="noopener noreferrer">
+                                    <img src="/icon/telegram_icon.png" alt="">
+                                  </a>
+                                </div>
+                                <div>
+                                  <a href="https://vk.com/caiman_handmade" target="_blank" rel="noopener noreferrer">
+                                    <img src="/icon/vk_icon.png" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

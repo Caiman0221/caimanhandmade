@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174965291-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-174965291-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Делаем предметные фото для Вашего сайта, социальных сетей и прочих интернет ресурсов"/>
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="icon" type="image/x-icon" href="/tab_logo.ico" />
+    <link rel="canonical" href="https://www.caimanhandmade.ru/photo"/>
+    <script src="/JS/main.js"></script>
+    <script src="/JS/formsFetch.js"></script>
+    <title>Предметные фото Ваших вещей</title>
+</head>
+<body class="stopOverflowClass">
+
+    <div id="preloadContainer">
+        <div id="preloadContent">
+            <img src="/icon/logo_black.png" alt="">
+        </div>
+        <style>
+            #preloadContainer {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: #ffffff;
+                z-index: 10;
+                transition: all 0.5s ease-in-out;
+            }
+
+            #preloadContent {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #preloadContent img {
+                width: 230px;
+                transition: all 1s ease-in-out;
+            }
+
+            .widthTransform {
+                opacity: 0.4;
+            }
+
+            .preloadNoneClass {
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+            }
+        </style>
+        <script type="text/javascript">
+            let widthTransform = setInterval (()=>{
+                let img = document.getElementById('preloadContent');
+                img = img.getElementsByTagName('img')[0];
+                if (img.classList.contains('widthTransform')) img.classList.remove('widthTransform')
+                else img.classList.add('widthTransform')
+            },1000)
+
+            window.onload = function() {
+                document.getElementById('preloadContainer').classList.add('preloadNoneClass')
+                document.body.classList.remove('stopOverflowClass');
+                setTimeout(()=>{
+                    document.getElementById('preloadContainer').style.display = 'none';
+                },1000);
+            }
+        </script>
+    </div>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(66188473, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/66188473" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <div class="menuButtonContainer" id="openMenuButton">
+        <div class="menuButtonContent">
+            <img src="/icon/menu_icon_red.png" alt="" onclick="openMenuButton()">
+        </div>
+    </div>
+
+    <div id="menuContainer" class="menuHiddenClass">
+        <div id="menuContent">
+            <div class="inlineMenuContainer" >
+                <div class="inlineMenuContent" id="menuArticlesContent">
+                    <div>
+                        <a href="#Contacts" onclick="closeMenuButton()">
+                            <span class="redLetter">К</span>онтакты
+                        </a>
+                    </div>
+                    <div><a href="/web/"><span class="redLetter">С</span>айты</a></div>
+                    <div><a href="/photo/"><span class="redLetter">Ф</span>ото</a></div>
+                    <div><a href="/things/"><span class="redLetter">В</span>ещи</a></div>
+                    <div><a href="/about/"><span class="redLetter">О</span>бо мне</a></div>
+                </div>
+            </div>
+            <div class="inlineMenuContainer">
+                <div class="inlineMenuContent" id="menuLogoContent">
+                    <a href="/">
+                        CAIMAN
+                        <div>
+                            HANDMADE
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menuButtonContainer menuButtonHiddenClass" id="closeMenuButton">
+        <div class="menuButtonContent">
+            <img src="/icon/menu_close_icon.png" alt="" onclick="closeMenuButton()">
+        </div>
+    </div>
+
+    <!-- part for page -->
+
+    <div id="maxWidth">
+        <div id="logoContainer">
+            <div id="logoContent">
+                <a href="/">
+                    CAIMAN
+                    <span>
+                        HANDMADE
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header id="pagesHeader">
+        <div id="contentsContainer">
+            <div id="contentsContent">
+                <div><a href="#prices"><span class="redLetter">У</span>слуги</a></div>
+                <div><img src="/icon/Arrow/arrow_left_to_right_gradient.png" alt=""></div>
+                <div><a href="#portfolio"><span class="redLetter">П</span>ортфолио</a></div>
+                <div><img src="/icon/Arrow/arrow_left_to_right_gradient.png" alt=""></div>
+                <div><a href="#Contacts"><span class="redLetter">К</span>онтакты</a></div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="sectionContainer">
+            <article>
+                <h1>Фото</h1>
+            </article>
+            <div>
+                <p>Предметная съемка в фотостудии для социальных сетей, различных интернет ресурсов и оформления сайтов</p>
+            </div>
+            <div class="flexStagesContainer">
+                <div class="flexStagesContent">
+                    <div>Рассмотрение ТЗ</div>
+                    <div><img src="/icon/Arrow/arrow_left_to_right.png" alt=""></div>
+                    <div>Сьёмка</div>
+                    <div><img src="/icon/Arrow/arrow_left_to_right.png" alt=""></div>
+                    <div>Результат</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="greyBackground" id="prices">
+        <div class="sectionContainer">
+            <article>
+                <h2>Услуги</h2>
+            </article>
+            <div id="sectionPayCardsContainer">
+                <div id="sectionInlineContainer" onclick="orderWindowOpen(event)">
+                    <div class="PayCards">
+                        <input type="number" name="inputForOrder" value="6">
+                        <h3>Базовая коррекция</h3>
+                        <p>Выравнивание цветов на всех фото, обрезка снимков под необходимый формат</p>
+                        <!--
+                            <menu>
+                                <li>за фото</li>
+                                <li>100&#8381;</li>
+                            </menu>
+                        -->
+                        <div><button>Заказать</button></div>
+                    </div>
+                    <div class="PayCards">
+                        <input type="number" name="inputForOrder" value="7">
+                        <h3>Средняя обработка</h3>
+                        <p>Ретушь, прозрачный фон, цветокоррекция каждого отдельного фото</p>
+                        <!--
+                            <menu>
+                                <li>за фото</li>
+                                <li>200&#8381;</li>
+                            </menu>
+                        -->
+                        <div><button>Заказать</button></div>
+                    </div>
+                    <div class="PayCards">
+                        <input type="number" name="inputForOrder" value="8">
+                        <h3>Сложная ретушь</h3>
+                        <p>Фотография бликующих и других предметов, требующих замену фона или части фото</p>
+                        <!--
+                            <menu>
+                                <li>за фото</li>
+                                <li>300&#8381;</li>
+                            </menu>
+                        -->
+                        <div><button>Заказать</button></div>
+                    </div>
+                </div>
+            </div>
+            <!--
+                <div>
+                    <p style="font-size: 16pt;">* минимальная стоимость заказа 1000&#8381;, для выездных фото 2000&#8381;. Доставка оплачивается отдельно.</p>
+                </div>
+            -->
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="sectionContainer">
+            <article>
+                <h2>Портфолио</h2>
+            </article>
+            <div id="portfolioContainer">
+                <img src="/Photos/Photo/your_point_0002.webp" alt="">
+                <img src="/Photos/Photo/your_point_0003.webp" alt="">
+                <img src="/Photos/Photo/your_point_0001.webp" alt="">
+                <img src="/Photos/Photo/your_point_0004.webp" alt="">
+                <img src="/Photos/Photo/your_point_0007.webp" alt="">
+                <img src="/Photos/Photo/your_point_0006.webp" alt="">
+                <img src="/Photos/Photo/your_point_0008.webp" alt="">
+                <img src="/Photos/Photo/your_point_0005.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer id="pagesFooter">
+        <div id="Contacts">
+            <div id="contactsArticleContainer">
+                <div id="contactsArticleContent">
+                    <h3>контакты</h3>
+                </div>
+            </div>
+            <div id="contactsContainer">
+                <div class="inlineContactsContainer">
+                    <div id="contactsContentForm" class="contactsContent">
+                        <div>Ваше имя</div>
+                        <div><input type="text" name="" maxlength="20" id="footerCustomerName" onchange="footerNameChange()"></div>
+                        <div>Ваш email</div>
+                        <div><input type="tel" name="" maxlength="20" id="footerCustomerEmail" onchange="footerEmailChange()"></div>
+                        <div>Ваш вопрос</div>
+                        <div>
+                            <textarea name="" cols="30" rows="4" maxlength="400" id="footerCustomerQuestion"></textarea>
+                        </div>
+                        <div id="footerErrorDiv"></div>
+                        <div><button onclick="footerQuestionClick()">отправить</button></div>
+                    </div>
+                </div>
+                <div class="inlineContactsContainer">
+                    <div class="contactsContent">
+                        <div class="contactsInfo">
+                          <a href="tel:+79774439642">+7 (977) 443 96 42</a>
+                        </div>
+                        <div class="contactsInfo">
+                          <a href="mailto:info@caimanhandmade.ru">info@caimanhandmade.ru</a>
+                        </div>
+                        <div class="contactsInfo">
+                            г. Москва
+                        </div>
+                        <div id="socialLinksContainer" class="contactsInfo">
+                            <div id="socialLinksContent">
+                              <div>
+                                <a href="https://www.instagram.com/caiman_handmade/" target="_blank" rel="noopener noreferrer">
+                                  <img src="/icon/inst_icon.png" alt="">
+                                </a>
+                              </div>
+                              <div>
+                                <a href="https://t.me/caiman_handmade" target="_blank" rel="noopener noreferrer">
+                                  <img src="/icon/telegram_icon.png" alt="">
+                                </a>
+                              </div>
+                              <div>
+                                <a href="https://vk.com/caiman_handmade" target="_blank" rel="noopener noreferrer">
+                                  <img src="/icon/vk_icon.png" alt="">
+                                </a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="orderWindow" class="orderWindowsCloseClass">
+        <div class="orderWindowContainer">
+            <div class="orderWindowContent">
+                <div>Ваш заказ *</div>
+                <div>
+                    <select name="" id="orderTypeSelect" onchange="customerOrderTypeCheck()">
+                        <option value="">Выберите необходимое</option>
+                        <option value="1">Одностраничный сайт</option>
+                        <option value="2">Многостраничный проект</option>
+                        <option value="3">Интернет-магазин</option>
+                        <option value="4">Сложные сайты</option>
+                        <option value="5">Техническое обслуживание</option>
+                        <option value="6">Базовая коррекция фото</option>
+                        <option value="7">Средняя обработка фото</option>
+                        <option value="8">Сложная ретушь фото</option>
+                    </select>
+                </div>
+                <div>Ваше имя *</div>
+                <div><input type="text" name="" id="customerName" onchange="customerNameCheck()" maxlength="20"></div>
+                <div>Ваш телефон *</div>
+                <div><input type="tel" name="" id="customerPhone" onchange="customerPhoneCheck()" maxlength="20"></div>
+                <div>Ваш email *</div>
+                <div><input type="email" name="" id="customerEmail" onchange="customerEmailCheck()" maxlength="60"></div>
+                <div>Ваше ТЗ или макет проекта</div>
+                <div>
+                    <label for="customerFile" id="labelFileOnChange">Ваш файл</label>
+                    <input type="file" id="customerFile" onchange="inputFileChange()" style="display: none;">
+                </div>
+                <div id="orderErrorDiv">
+
+                </div>
+                <div>
+                    <button onclick="enterOrderButton()">отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="thanksForOrederWindow" class="orderWindowsCloseClass">
+        <div class="orderWindowContainer">
+            <div class="orderWindowContent">
+                <p>Благодарю Вас за заказ</p>
+                <p>В скором времени я свяжусь с Вами для уточнения деталей заказа</p>
+                <div>
+                    <button onclick="closeOrderWindowButton()">
+                        закрыть
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="closeOrderWindowButton" class="menuButtonContainer orderWindowCloseButtonClass">
+        <div class="menuButtonContent">
+            <img src="/icon/menu_close_icon.png" alt="" onclick="closeOrderWindowButton()">
+        </div>
+    </div>
+
+</body>
+</html>

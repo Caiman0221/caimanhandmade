@@ -1,0 +1,273 @@
+@font-face {
+    font-family: Dancing_Script;
+    src: url(/Fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(/Fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Comfortaa;
+    font-size: 14pt;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.1s ease-in-out ;
+}
+
+a:hover {
+    color: #f24822;
+}
+
+a:focus, a:active {
+    -webkit-tap-highlight-color: transparent;
+    color: #f24822;
+}
+
+.redLetter {
+    color: #f24822;
+}
+
+h1 {
+    font-size: 16pt;
+}
+
+h2 {
+    font-size: 15pt;
+}
+
+/*
+
+Order page
+
+*/
+
+#orderWindow,
+#thanksForOrederWindow {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: #dfdfdf;
+    transition: all 0.6s ease-in-out;
+}
+
+#orderWindow {
+    z-index: 7;
+}
+
+#thanksForOrederWindow {
+    z-index: 8;
+}
+
+#closeOrderWindowButton {
+    z-index: 9;
+}
+
+.orderWindowContainer {
+    position: relative;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.orderWindowContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.orderWindowContent div {
+    margin: 10px auto;
+}
+
+.orderWindowContent select,
+input, button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ffffff;
+    font-size: 14pt;
+    border-radius: 10px;
+    font-family: Comfortaa
+}
+
+.orderWindowContent input {
+    width: calc(100% - 20px);
+    text-align: center;
+}
+
+.orderWindowContent select {
+    width: 100%;
+}
+
+.orderWindowContent label {
+    display: block;
+    width: 100%;
+    height: 22px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px 0;
+}
+
+.orderWindowContent button {
+    width: 60%;
+}
+
+.orderWindowContent button:active {
+    color: #f24822;
+}
+
+.orderWindowsCloseClass {
+    right: 0;
+}
+
+.orderWindowCloseButtonClass {
+    right: -100px;
+}
+
+@media screen
+and (max-width: 900px)
+and (orientation: landscape) {
+    /*
+
+    Order page
+
+    */
+
+    #orderWindow {
+        overflow-y: scroll;
+    }
+    .orderWindowContainer {
+        width: 60%;
+    }
+
+    .orderWindowContent div {
+        margin: 10px auto;
+    }
+
+    #orderWindow .orderWindowContent {
+        position: static;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+}
+
+@media screen
+and (min-device-width: 768px)
+and (orientation: portrait) {
+    html, body {
+        font-size: 16pt;
+    }
+
+    h1 {
+        font-size: 20pt;
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    .orderWindowContainer {
+        width: 60%;
+    }
+
+    .orderWindowContent div {
+        margin: 15px auto;
+    }
+}
+
+@media screen
+and (min-width: 900px)
+and (max-width: 1024px)
+and (orientation: landscape) {
+    .orderWindowContainer {
+        width: 40%;
+    }
+
+    .orderWindowContent div {
+        margin: 15px auto;
+    }
+}
+
+@media screen
+and (min-width: 1025px)
+and (orientation: portrait) {
+    html, body {
+        font-size: 16pt;
+    }
+
+    h1 {
+        font-size: 22pt;
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    .orderWindowContainer {
+        width: 60%;
+        max-width: 1000px;
+    }
+
+    .orderWindowContent div {
+        margin: 15px auto;
+    }
+}
+
+@media screen
+and (min-width: 1025px)
+and (orientation: landscape) {
+    html, body {
+        font-size: 16pt;
+    }
+
+    h1 {
+        font-size: 22pt
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+    .orderWindowContainer {
+        width: 60%;
+        max-width: 700px;
+    }
+
+    .orderWindowContent div {
+        margin: 15px auto;
+    }
+
+    .orderWindowContent select,
+    input, button {
+        padding: 10px 15px;
+        font-size: 16pt;
+    }
+
+    .orderWindowContent input {
+        width: calc(100% - 30px);
+    }
+
+    .orderWindowContent label {
+        display: block;
+        width: 100%;
+        height: 28px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 10px 0;
+    }
+
+}
